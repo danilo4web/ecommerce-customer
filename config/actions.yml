@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    public: true
+    autowire: true
+
+  action.greet:
+    class: Ecommerce\CustomerService\Actions\GreetAction
+    arguments:
+      $greeting: "Welcome to Customer Service!"
