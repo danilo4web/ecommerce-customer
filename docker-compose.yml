@@ -2,12 +2,12 @@ version: "3"
 services:
   customer-service:
     image: nginx:alpine
-    container_name: customer-service
+    container_name: customer-service__nginx
     volumes:
       - ./:/app:delegated
       - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:delegated
     ports:
-      - "8080:80"
+      - "8081:80"
     expose:
       - "80"
     depends_on:
@@ -15,10 +15,11 @@ services:
 
   php:
     build: .
-    container_name: customer-service_php
+    container_name: customer-service__php
     volumes:
       - ./:/app:delegated
       - ./docker/fpm.conf:/usr/local/etc/php-fpm.d/www.conf:delegated
+      - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:delegated
     environment:
       LOG_LEVEL: "debug"
       DEBUG: "true"

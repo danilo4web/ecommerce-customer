@@ -1,5 +1,5 @@
-FROM php:7.4.4-fpm
-WORKDIR /var/www/html
+FROM php:8.0-fpm
 
-RUN apt-get update && apt-get upgrade -y \
-    && docker-php-ext-install opcache
+RUN apt-get update && apt-get upgrade -y
+RUN docker-php-ext-install opcache
+RUN pecl install xdebug && docker-php-ext-enable xdebug

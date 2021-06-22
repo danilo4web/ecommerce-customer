@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Ecommerce\CustomerService;
 
@@ -42,15 +44,16 @@ class WebApplication
     {
         try {
             $response = $this->kernel->handle($request);
-
             $response->send();
 
             if ($this->kernel instanceof TerminableInterface) {
                 $this->kernel->terminate($request, $response);
             }
         } catch (NotFoundHttpException $exception) {
-            (new JsonResponse(['error' => sprintf('Path %s does not exist.', $request->getPathInfo())],
-                Response::HTTP_NOT_FOUND))->send();
+            (new JsonResponse(
+                ['error' => sprintf('Path %s does not exist.', $request->getPathInfo())],
+                Response::HTTP_NOT_FOUND
+            ))->send();
         }
     }
 }
