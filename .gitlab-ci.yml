@@ -27,7 +27,16 @@ phpunit:
 
 check-psr12:
   stage: codestyle
-  dependencies: []
+  dependencies:
+    - composer
   script:
     - php -v
     - composer check-psr12
+
+deploy:
+  stage: deploy
+  dependencies: []
+  script:
+    - echo "run deploy script"
+  only:
+    - main
