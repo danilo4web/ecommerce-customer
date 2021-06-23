@@ -1,0 +1,33 @@
+image: dockerphp/gitlab-ci-pipeline:7.1
+
+stages:
+  - preparation
+  - codestyle
+  - test
+  - deploy
+
+composer:
+  stage: preparation
+  script:
+    - php -v
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - cp .env-example .env
+  artifacts:
+    paths:
+      - vendor/
+      - .env
+
+phpunit:
+  stage: test
+  dependencies:
+    - composer
+  script:
+    - php -v
+    - composer test
+
+check-psr12:
+  stage: codestyle
+  dependencies: []
+  script:
+    - php -v
+    - composer check-psr12
