@@ -4,6 +4,6 @@ services:
     autowire: true
 
   action.greet:
-    class: Ecommerce\CustomerService\Actions\GreetAction
+    class: Ecommerce\CustomerServiceApi\Actions\GreetAction
     arguments:
       $greeting: "Welcome to Customer Service!"

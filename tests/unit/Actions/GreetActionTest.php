@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Ecommerce\CustomerService\Actions;
+namespace Tests\Ecommerce\CustomerServiceApi\Actions;
 
-use Ecommerce\CustomerService\Actions\GreetAction;
+use Ecommerce\CustomerServiceApi\Actions\GreetAction;
 use Symfony\Component\HttpFoundation\{Request, JsonResponse};
 use Psr\Log\LoggerInterface;
 use PHPUnit\Framework\TestCase;

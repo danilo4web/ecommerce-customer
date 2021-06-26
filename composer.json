@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ecommerce\\CustomerService\\": "src"
+            "Ecommerce\\CustomerServiceApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Ecommerce\\CustomerService\\": "tests"
+            "Tests\\Ecommerce\\CustomerServiceApi\\": "tests"
         }
     },
     "require-dev": {

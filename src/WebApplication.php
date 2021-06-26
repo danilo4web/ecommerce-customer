@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ecommerce\CustomerService;
+namespace Ecommerce\CustomerServiceApi;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;

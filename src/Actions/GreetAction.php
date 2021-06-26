@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ecommerce\CustomerService\Actions;
+namespace Ecommerce\CustomerServiceApi\Actions;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;

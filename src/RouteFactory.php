@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ecommerce\CustomerService;
+namespace Ecommerce\CustomerServiceApi;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Routing\Loader\YamlFileLoader;

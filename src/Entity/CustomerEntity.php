@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ecommerce\CustomerService\Entity;
+namespace Ecommerce\CustomerServiceApi\Entity;
 
 use Doctrine\ORM\Entity;
 use Doctrine\ORM\EntityRepository;
@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table(name="customer")
- * @ORM\Entity(repositoryClass="Ecommerce\CustomerService\Repository\RecipeRepository")
+ * @ORM\Entity(repositoryClass="Ecommerce\CustomerServiceApi\Repository\RecipeRepository")
  */
 class CustomerEntity
 {
@@ -79,7 +79,7 @@ class CustomerEntity
 
     /**
      * @param integer $id
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setId($id)
     {
@@ -97,7 +97,7 @@ class CustomerEntity
 
     /**
      * @param string $name
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setName($name)
     {
@@ -115,7 +115,7 @@ class CustomerEntity
 
     /**
      * @param string $email
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setEmail($email)
     {
@@ -133,7 +133,7 @@ class CustomerEntity
 
     /**
      * @param string $phone
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setPhone($phone)
     {
@@ -151,7 +151,7 @@ class CustomerEntity
 
     /**
      * @param string $address
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setAddress($address)
     {
@@ -169,7 +169,7 @@ class CustomerEntity
 
     /**
      * @param string $gender
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setGender($gender)
     {
@@ -188,7 +188,7 @@ class CustomerEntity
 
     /**
      * @param integer $status
-     * @return \Ecommerce\CustomerService\Entity\CustomerEntity
+     * @return \Ecommerce\CustomerServiceApi\Entity\CustomerEntity
      */
     public function setStatus($status)
     {

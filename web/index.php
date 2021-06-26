@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use Ecommerce\CustomerService\WebApplication;
+use Ecommerce\CustomerServiceApi\WebApplication;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 

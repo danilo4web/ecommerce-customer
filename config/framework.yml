@@ -6,7 +6,7 @@ services:
     class: Symfony\Component\EventDispatcher\EventDispatcher
 
   Symfony\Component\Routing\RouteCollection:
-    factory: ['Ecommerce\CustomerService\RouteFactory', getRoutes]
+    factory: ['Ecommerce\CustomerServiceApi\RouteFactory', getRoutes]
     arguments:
       - 'actions.yml'
       - 'greeting.yml'
@@ -29,5 +29,5 @@ services:
     arguments:
       $dispatcher: '@Symfony\Component\EventDispatcher\EventDispatcherInterface'
 
-  Ecommerce\CustomerService\WebApplication:
+  Ecommerce\CustomerServiceApi\WebApplication:
     public: true
