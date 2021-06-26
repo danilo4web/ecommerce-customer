@@ -3,8 +3,11 @@
 ssh:
 	@docker-compose exec customer-service sh
 
+cache-folder:
+	@mkdir cache
+
 fix-permissions:
-	@mkdir cache && chmod -R 777 cache
+	@chmod -R 777 cache
 
 composer-install:
 	composer install
@@ -15,7 +18,7 @@ up:
 	printf "\n-> Server is available at: http://localhost$${app}" ;\
 	docker-compose logs -f || exit 0 ;
 
-build: clean composer-install fix-permissions up
+build: clean composer-install cache-folder  fix-permissions up
 
 clean:
 	docker-compose exec customer-service rm -f /app/cache/container.php /app/cache/container.php.meta | \
