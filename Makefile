@@ -4,7 +4,7 @@ ssh:
 	@docker-compose exec customer-service sh
 
 fix-permissions:
-	@chmod -R 777 cache
+	@mkdir cache && chmod -R 777 cache
 
 composer-install:
 	composer install
